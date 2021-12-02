@@ -19,6 +19,7 @@ function die() {
 # Check to see if the user has specified where the ssh-agent socket should live
 SSH_AGENT_A_FLAG=""
 if [[ -v "BUILDKITE_PLUGIN_SSH_AGENT_SOCKET" ]]; then
+    BUILDKITE_PLUGIN_SSH_AGENT_SOCKET="$(eval echo "${BUILDKITE_PLUGIN_SSH_AGENT_SOCKET}")"
     # If we're being asked to put an ssh-agent socket somewhere, let's ensure
     # that the directory exists, and that there's no file there
     mkdir -p "$(dirname "${BUILDKITE_PLUGIN_SSH_AGENT_SOCKET}")"
