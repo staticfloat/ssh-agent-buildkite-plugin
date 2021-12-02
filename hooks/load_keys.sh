@@ -25,6 +25,7 @@ if [[ -v "BUILDKITE_PLUGIN_SSH_AGENT_SOCKET" ]]; then
     if [[ -f "${BUILDKITE_PLUGIN_SSH_AGENT_SOCKET}" ]]; then
         die "Requested ssh-agent socket path already exists!"
     fi
+    echo "Requesting that the socket be located at ${BUILDKITE_PLUGIN_SSH_AGENT_SOCKET}"
     SSH_AGENT_A_FLAG="-a ${BUILDKITE_PLUGIN_SSH_AGENT_SOCKET}"
 fi
 
@@ -58,4 +59,5 @@ while [[ -v "BUILDKITE_PLUGIN_SSH_AGENT_KEYVARS_${IDX}" ]]; do
 done
 
 # List all loaded SSH keys
+echo "SSH_AUTH_SOCK: ${SSH_AUTH_SOCK}"
 ssh-add -l || true
