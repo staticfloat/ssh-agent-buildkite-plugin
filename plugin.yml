@@ -10,4 +10,8 @@ configuration:
     # An array of variables that contain (base64-encoded) keyfiles
     keyvars:
       type: array
+
+    # If you want the ssh-agent to store its socket at a particular path, list it here
+    socket:
+      type: string
   additionalProperties: false
