@@ -2,6 +2,7 @@
 
 set -eou pipefail
 
+echo "OSTYPE: '${OSTYPE}'"
 if [[ "${OSTYPE}" == "msys"* ]]; then
     # Tell the windows service to forget everything, and then die
     /C/Windows/System32/OpenSSH/ssh-agent -D

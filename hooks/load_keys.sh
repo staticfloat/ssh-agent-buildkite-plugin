@@ -2,12 +2,15 @@
 
 set -eou pipefail
 
+echo "OSTYPE: '${OSTYPE}'"
+
 SSH_AGENT="ssh-agent"
 SSH_ADD="ssh-add"
 # If we're on windows, we want to use the builtin openssh utilities, not mingw ones
 if [[ "${OSTYPE}" == "msys"* ]]; then
     SSH_AGENT="/C/Windows/System32/OpenSSH/ssh-agent"
     SSH_ADD="/C/Windows/System32/OpenSSH/ssh-add"
+    echo "Starting ssh-agent service, if not already started..."
     powershell -noprofile -command "Start-Service ssh-agent"
     export GIT_SSH="C:\\Windows\\System32\\OpenSSH\\ssh.exe"
 else
