@@ -11,6 +11,7 @@ steps:
     commands: |
       # Test that we can clone this repository via SSH (should fail without a proper SSH key loaded):
       git clone git@github.com:staticfloat/ssh-agent-buildkite-plugin.git checkout
+      ls -la checkout
       [[ -f checkout/README.md ]]
     env:
       SSH_AGENT_SSH_KEY: "LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUFsd0FBQUFkemMyZ3RjbgpOaEFBQUFBd0VBQVFBQUFJRUEyaGVGUVlPZ21SZ0laQTFkc2RnUmpGSVBaUHI1Z2M3U3ZHTjFjME1yeUxKd3BGOGczcm9NCnEvQUhrNzVRb3NSd0E5MEM2dVBXeXgxSCtvOGYrTk5kNnpNRCtSb2RHemxKTVNwWXlLaE1DRXhDSDhvUk1LR1o5dHdyYXoKcTRvWWNoSmpDRmlHUzZCTzhuZXM2YkdUV0tiNkRNQU5ya29sWnViNUhUUzRrbEtuc0FBQUlJUlN0bVVVVXJabEVBQUFBSApjM05vTFhKellRQUFBSUVBMmhlRlFZT2dtUmdJWkExZHNkZ1JqRklQWlByNWdjN1N2R04xYzBNcnlMSndwRjhnM3JvTXEvCkFIazc1UW9zUndBOTBDNnVQV3l4MUgrbzhmK05OZDZ6TUQrUm9kR3psSk1TcFl5S2hNQ0V4Q0g4b1JNS0daOXR3cmF6cTQKb1ljaEpqQ0ZpR1M2Qk84bmVzNmJHVFdLYjZETUFOcmtvbFp1YjVIVFM0a2xLbnNBQUFBREFRQUJBQUFBZ1FDVm5xZEQ3KwpxZ3ZSVWNsdkxkaks5VlJnTGJzemF6Y0ZHdy9zYlg0WkJMS3VnT1RGai9sRUlYUHgvam95QXMybmxDblVCZ0p4ajMxY25JCndxSWJrZDZPdGFtNEl2a090VFhPWUVFRW83d200dTQ1c3FIMXJJSEYxNjc0OVE3WmlHM0kyYzRKRXNpU1duaDErdTU2NWUKeE1ITmNGL3dWd21HM2FhbFRBV0F5UVNRQUFBRUJ0cERJQWUybG5NaEg2NU5VUldEbllxR3hwcWx6cUtaYjNrWXdMb1k4UQptcnFMMktyTUxIYTBVSHJHQ1pIdkVtTDRvdm5FQzFXKzZ3MWJkMVNlcWU2RkFBQUFRUUQzdVU3eUdNRnplb3lKM29oaDdjCkxGQUkvcFFjOFlEc0NlanhVd043cGNNcW93Mjh1RnB3S0FvZFlrZnpobVc4VTYybSs0UkdvOGVTQ2JWdFJ3S3JGbkFBQUEKUVFEaFlNZlhDRnJ4cjhNYkJnR3ZIOWkvVkFkNlRPazJkbkhMbzNNaGJ3UHM5VXhjWFdWTHMvcVM4azAwZ3dGekg1bDhuWgp0VHNzemUwRjRvbWk3aVNpM05BQUFBREhOaFltRmxRR3RvYjJ4cGJnRUNBd1FGQmc9PQotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K"
@@ -27,4 +28,5 @@ steps:
     commands: |
       # Test that we can clone this repository via SSH (should fail without a proper SSH key loaded):
       git clone git@github.com:staticfloat/ssh-agent-buildkite-plugin.git checkout
+      ls -la checkout
       [[ -f checkout/README.md ]]
