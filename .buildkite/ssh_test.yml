@@ -3,7 +3,6 @@ steps:
     agents:
       queue: "juliaecosystem"
       os: "${OS?}"
-      arch: "x86_64"
     plugins:
       # Test that we can pass keys in via environment variables
       - "./.buildkite/plugins/ssh-agent":
@@ -20,7 +19,6 @@ steps:
     agents:
       queue: "juliaecosystem"
       os: "${OS?}"
-      arch: "x86_64"
     plugins:
       # Test that we can pass keys in via files
       - "./.buildkite/plugins/ssh-agent":
