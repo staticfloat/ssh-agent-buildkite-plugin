@@ -1,1 +1,3 @@
+# Work around launchctl on macOS doing weird stuff to dynamically launch an `ssh-agent` that it controls
+unset SSH_AUTH_SOCK
 source $(dirname "${BASH_SOURCE[0]}")/load_keys.sh
